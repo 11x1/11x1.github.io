@@ -160,13 +160,14 @@ p {
 
 .info-tabs .tab {
     max-width: 400px;
-
+    margin-top: 10px;
     border: #b8c2dd solid 2px;
     padding: 0px 10px;
     border-radius: 5px;
     height: fit-content;
     box-shadow: #a1aed160 0  0 30px;
-    margin-bottom: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
 }
 
 .info-tabs .tab .title-tab {
@@ -186,7 +187,7 @@ p {
     font-size: 1em;
 }
 
-.info-tabs .tab .description-tab p {
+.info-tabs .tab .description-tab p, .info-tabs .tab .description-tab a {
     background-image: linear-gradient(135deg, rgb(169, 161, 204) 0%, rgb(158, 142, 216) 100%);
     background-clip: text;
     background-size: 100%;
@@ -247,20 +248,26 @@ p {
     grid-template-columns: repeat(3, 200px);
 }
 
+.zoom-on-hover {
+    transform: scale(1, 1);
+    transition-duration: 0.5s;
+}
+
+.zoom-on-hover:hover {
+    transition-duration: 0.2s;
+    box-shadow: #a1aed1f0 0  0 30px;
+    transform: scale(1.1,1.1);
+
+}
+
 .developers div {
     border: #8898c4 solid 3px;
     margin: 0 auto;
     padding: 10px 10px;
     border-radius: 10px;
     margin-bottom: 60px;
-    transition-duration: 1s;
     width: 200px;
     line-height: 0px;
-}
-
-.developers div:hover {
-    box-shadow: #a1aed180 0  0 30px;
-    transition-duration: 0.2s;
 }
 
 .developers img {
