@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="eclipse" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://11x1.github.io/eclipse/" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/945319792104063037/966266928161247252/d1e9be77872654dbdcd2b2a02af4ad4c.png" />
+    <meta property="og:description" content="top performing primordial lua" />
+    <meta name="theme-color" content="#2e8fff">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
+    <title>eclipse.lua | </title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/945319792104063037/966266928161247252/d1e9be77872654dbdcd2b2a02af4ad4c.png" type="image/icon type">
+
+</head>
+<body>
+  <!-- div to have a nice mobile bg -->
+  <div id="mobile-bg"></div>
+
+  <div id="tsparticles"></div>
+
+  <!-- main window div with info -->
+  <div class="window">
+      <div class="window-title">
+          <div class="window-title-text">
+              <h1>eclipse</h1>
+          </div>
+      </div>
+      <div class="window-content">
+          <p>
+              <div class="description">
+                  <p>
+                      Eclipse is a top performing primordial lua for free.
+                  </p>
+              </div>
+          </p>
+          <p>
+              <div class="buttons">
+                  <a class="button" id="discord" href="https://discord.gg/QyAVC5RehJ">Discord</a>
+                  <a class="button" id="youtube" href="https://www.youtube.com/watch?v=KHRqOt-JkEw&ab_channel=khey">Media</a>
+              </div>
+          </p>
+      </div>
+  </div>
+
+  <!-- particle background initializing script -->
+  <script>
+    tsParticles.load("tsparticles", {
+      fpsLimit: 60,
+      interactivity: window.innerWidth > 800 ? {
+        
+      } : {
+        detectsOn: "canvas",
+        events: {
+          onHover: {
+            enable: true,
+            mode: "attract"
+          },
+          
+          resize: false
+        },
+        modes: {
+          bubble: {
+            distance: 400,
+            duration: 2,
+            opacity: 0.8,
+            size: 40
+          },
+          push: {
+            quantity: 10
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          }
+        }
+      },
+      particles: {
+        color: {
+          value: "#2e8fff"
+        },
+        links: {
+          color: "#2e8fff",
+          distance: 200,
+          enable: true,
+          opacity: 0.5,
+          width: 2
+        },
+        collisions: {
+          enable: false
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outMode: "bounce",
+          random: false,
+          speed: 1,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+            value_area: 500
+          },
+          value: 50
+        },
+        opacity: {
+          value: 0.9
+        },
+        shape: {
+          type: "edge"
+        },
+        size: {
+          random: true,
+          value: 2
+        }
+      },
+      detectRetina: true
+    });     
+  </script>
+
+  <!-- title animation script -->
+  <script>
+    let sayings_iter = 0
+    function typewrite (text, speed) {
+      var i = 0;
+      var speed = speed;
+      let hit_limit = false;
+      let hit_static_limit = false;
+      var timer = setInterval(function() {
+        if (text[i] == ' ' && !hit_static_limit) {
+          i++;
+        } else if (text[i] == ' ' && hit_static_limit) {
+          i--;
+        }
+        if (i <= text.length && !hit_limit) {
+          document.title = base + text.substring(0, i);
+          i++;
+          if (i == text.length) {
+            hit_limit = true;
+          }
+        } else if (hit_limit && !hit_static_limit) {
+          document.title = base + text;
+          i++;
+          if (i == text.length + 3) {
+            hit_static_limit = true;
+          }
+        } else if (hit_static_limit && i > 0) {
+          document.title = base + text.substring(0, i);
+          i--;
+        } else {
+          clearInterval(timer);
+          sayings_iter = sayings_iter >= sayings.length - 1 ? 0 : sayings_iter + 1;
+          let new_saying = sayings[sayings_iter]
+          typewrite(new_saying, speed);
+          
+          hit_static_limit = false;
+          hit_limit = false;
+        }
+      }, speed);
+    }
+
+    const base = 'eclipse.lua | ';
+    const sayings = [
+      'top performing primordial lua',
+      'Justin Technologies LLC',
+      'one of the best',
+      'the best',
+      'donate 2000 credits to uid 573',
+      'khey can\'t code',
+    ]
+    
+    typewrite(sayings[sayings_iter], 350);
+
+  </script>
+
+  <!-- window dragging script -->
+  <script>
+    const window_element = document.querySelector('.window');
+    const button_discord = document.querySelector('#discord');
+    const button_youtube = document.querySelector('#youtube');
+    const performance_mode_checkbox = document.querySelector('.performance-mode-checkbox');
+
+    const lerp = (a, b, n) => a + (b - a) * n;
+    const isHover = e => e.parentElement.querySelector(':hover') === e;    
+
+    let mousedown = false
+    let cached_mouse = {
+      x: 50,
+      y: 50
+    }
+
+    mouse_pos = { // values in perc
+      x: 50,
+      y: 50
+    }
+
+    onmousemove = function(e){ mouse_pos.x = e.clientX/window.innerWidth * 100; mouse_pos.y = e.clientY/window.innerHeight * 100};
+    document.addEventListener("mouseup", () => {mousedown = false});
+    document.addEventListener("mousedown", () => {mousedown = true;});
+
+
+    // call every frame
+    setInterval(() => {
+      if (window.innerWidth > 800) {
+        let left = parseFloat(window_element.style.left.toString().replace('%', ''));
+        let top = parseFloat(window_element.style.top.toString().replace('%', ''));
+
+        let center_window_x = window_element.clientWidth / 2 / window.innerWidth * 10;
+        let center_window_y = window_element.clientHeight / 2 / window.innerHeight * 10;
+
+        if (!left) {
+          left = 50 - center_window_x;
+        }
+        if (!top) {
+          top = 50 - center_window_y;
+        }
+
+        if (mousedown && !isHover(button_discord) && !isHover(button_youtube)) {
+          window_element.style = `left: ${lerp(left, mouse_pos.x, 0.1) - center_window_x}%; top: ${lerp(top, mouse_pos.y, 0.1) - center_window_y}%;`;
+          cached_mouse.x = mouse_pos.x
+          cached_mouse.y = mouse_pos.y
+        } else {
+            window_element.style = `left: ${lerp(left, cached_mouse.x, 0.1) - center_window_x}%; top: ${lerp(top, cached_mouse.y, 0.1) - center_window_y}%;`;
+        }
+      } else {
+        window_element.style = `margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);`;
+      }
+    }, 1000 / 60);
+    
+  </script>
+</body>
+</html>

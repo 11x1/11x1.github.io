@@ -1,0 +1,59 @@
+@font-face {
+    font-family: rounded;
+    src: url(./assets/fonts/rounded/trakya-sans-alt-500-regular-webfont.woff) format('woff');
+}
+
+body {
+    background-color: #101010;
+}
+
+#daddycontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-weight: bold;
+    color: #ffb9b9;
+}
+
+#text-to-gif {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-weight: 500;
+    
+    color: #ffb9b9;
+    min-width: 500px;
+
+    border: 2px solid #ffb9b9;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #424242;
+
+    text-align:center;
+    
+}
+
+.container {
+    display:inline-block;
+    height:250px;
+    width:15%;
+    margin: 0 auto;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: fit-content;
+    height: 153px;
+
+    display: flex;
+    visibility: hidden;
+}
+
+#image-preview-img {
+    border-radius: 10px;
+}
