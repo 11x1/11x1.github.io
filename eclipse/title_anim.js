@@ -42,6 +42,8 @@ const sayings = [
     'top performing primordial lua',
     'Justin Technologies LLC',
     'one of the best',
+    'cats 🐈',
+    'why waste 10$ when you can have eclipse',
     'the best',
     'donate 2000 credits to uid 573',
     'khey can\'t code',
