@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>khey.codes - khey does code</title>
-    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./body.css">
+    <link rel="stylesheet" href="./projects.css">
+    <link rel="stylesheet" href="./footer.css">
+
+    <title>khey.codes</title>
+    <link rel="icon" type="image/png" href="./kheycodes-logo.png" />
 
     <meta property="og:title" content="khey.codes - khey does da code" />
     <meta property="og:type" content="website" />
@@ -14,61 +21,108 @@
     <meta name="theme-color" content="#ffabab">
 </head>
 <body>
-    <div class="header">
-        <div class="header-container">
-            <div class="name">
-                <h1>
-                    khey.codes
-                </h1>
-            </div>
-            <div class="nav">
-                <div class="button">
-                    <a href="https://github.com/11x1">github</a>
+    <div class="site"> 
+        <div class="container">
+            <div id="header" class="soft-in">
+                <div class="logo soft-up-up">
+                    <img src="./kheycodes-logo.png" alt="logo">
+                    <a>khey.codes</a> 
                 </div>
+                <div class="left-menu soft-up-up">
+                    <ul>
+                        <li>
+                            <a href='https://github.com/11x1'>
+                                <svg id="github" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href='https://discord.gg/lisp'>
+                                <svg id="discord" href="discord.gg/lisp" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.608c-1.356 0-2.46-1.104-2.46-2.472v-16.224c0-1.368 1.104-2.472 2.46-2.472h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524-1.248-.684-2.472-1.02-3.612-1.152-.864-.096-1.692-.072-2.424.024l-.204.024c-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zm-5.58-5.604c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                <div class="button">
-                    <a href="https://www.youtube.com/channel/UCCse73JJYtoEDBYoS4H_9xw">youtube</a>
+            <div id="body" class="soft-in">
+                <div class="text">
+                    <div class="name">
+                        <h2>khey</h2>
+                        <img src="./discord-pfp.png" alt="profile picture">
+                    </div>
+                    <p>Owner of eclipse LLC. Mainly program in Python and C++. Regurarly learn web design and development.</p>
+                </div>
+                <div class="profile-picture">
+                    <img src="./discord-pfp.png" alt="profile picture">
+                </div>
+            </div>
+
+            <div id="projects" class="soft-in">
+                <div class="heading">
+                    <h2>Projects</h2>
+                </div>
+                <div class="projects">
+                    <div data-link="https://khey.codes/eclipse/" style="--bg-img: url( './dark-header.png' )"  class="project soft-up highlight">
+                        <div class="text">
+                            <h2 style="--color-1: #ccc; --color-2: #ccc">Eclipse</h2>
+                            <h2 style="--color-1: #88afea; --color-2: #6060dd">lua</h2>
+                        </div>
+                        <div class="desc">
+                            <p>Eclipse is an all-in-one lua script for 
+                                <a style="--color-highlight: #ef7a7a;" href="https://primordial.dev/resources/eclipse-lua.246/">primordial</a>, 
+                                <a style="--color-highlight: #7175cd;" href="https://market.neverlose.cc/VEAFxs">neverlose</a> and 
+                                <a style="--color-highlight: #3cb368;">gamesense</a>. 
+                                We aim to provide a high quality script for free, to all users. Our community is currently at 500+ members and continues to grow daily.
+                            </p>
+                        </div>
+                    </div>
+                    <div data-link="https://khey.codes/primordial-gif-maker/" style="--bg-img: url( './primordial-gif-maker.png' )"  class="project soft-up">
+                        <div class="text">
+                            <h2 style="--color-1: #f49090; --color-2: #ef7a7a">Primordial</h2>
+                            <h2 style="--color-1: #ccc; --color-2: #ccc">gif maker</h2>
+                        </div>
+                        <div class="desc">
+                            <p>A simple to use primordial-style gif maker built with js.</p>
+                        </div>
+                    </div>
+                    <div data-link="https://khey.codes/1D-game/" style="--bg-img: url( './1d-game.png' )" class="project soft-up">
+                        <div class="text">
+                            <h2 style="--color-1: #ccc; --color-2: #ccc">1D-game</h2>
+                            <h2 style="--color-1: #ccc; --color-2: #ccc"></h2>
+                        </div>
+                        <div class="desc">
+                            <p>Title. A work in progress yet a simple game built up from scratch. Move with WASD. <br><br> <a  style="--color-highlight: #8888886f;" href="https://mashpoe.github.io/1D-Game/">Inspired by mashpoe</a> </p>
+                        </div>
+                    </div>
+                    <div data-link="https://khey.codes/web-solitaire/" style="--bg-img: url( './solitaire.png' )" class="project soft-up">
+                        <div class="text">
+                            <h2 style="--color-1: #ccc; --color-2: #ccc">web</h2>
+                            <h2 style="--color-1: #f00; --color-2: #111">solitaire</h2>
+                        </div>
+                        <div class="desc">
+                            <p>Solitaire game that runs in your browser. Simple click and drag input system made purely with javascript and no external libraries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="text">
+                    <p>© 2022 khey</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="page-body">
-        <div class="container">
-            <div>
-                <h2>About</h2>
-                <p>18 years old</p>
-                <p>I love programming and gaming</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div>
-                <h2>Projects</h2>
-                <p>eclipse.lua <a href="/eclipse/">(link)</a></p>
-                <p>primordial extension <a href="/primordial-extension/">(link)</a></p>
-                <p>primordial gif maker <a href="/primordial-gif-maker/">(link)</a></p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div>
-                <h2>Contact</h2>
-                <p>Discord: khey#2341</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="footer-container">
-            <div class="footer-text">
-                <p>
-                    khey.codes @ 2022
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <script src="index.js"> </script> 
+    <script>
+        const projects = document.querySelectorAll(".project");
+        projects.forEach(project => {
+            project.addEventListener("click", () => {
+                window.location.href = project.dataset.link;
+            });
+        });
+    </script>
 </body>
 </html>
