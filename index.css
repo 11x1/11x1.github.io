@@ -1,0 +1,62 @@
+* {
+    font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --main-bg-color: #424242;
+    --scnd-bg-color: #212121;
+
+    color: #cccccc;
+}
+
+body {
+    background-color: var( --scnd-bg-color );
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto 0;
+}
+
+.soft-up {
+    box-shadow:  6px 6px 14px #191919,
+    -6px -6px 14px #292929;
+}
+
+.soft-up-up {
+    background: linear-gradient(145deg, #232323, #1e1e1e) !important;
+    box-shadow:  6px 6px 14px #191919,
+                -6px -6px 14px #292929
+}
+
+.soft-in {
+    box-shadow: inset 6px 6px 14px #191919,
+            inset -6px -6px 14px #292929;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var( --scnd-bg-color );
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient( 145deg, var( --scnd-bg-color ), var( --main-bg-color ), var( --scnd-bg-color ) );
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient( 145deg, var( --scnd-bg-color ), var( --main-bg-color ), var( --main-bg-color ), var( --main-bg-color ), var( --scnd-bg-color ) );
+}
+
+.highlight {
+    border: #6b6bcb 2px solid;
+}

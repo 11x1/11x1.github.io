@@ -1,0 +1,86 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    margin: 10px;
+
+    border-radius: 20px;
+
+    background-color: var( --scnd-bg-color );
+}
+
+#projects .heading h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#projects .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 50px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+#projects .projects .project {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px;
+
+    max-width: 250px;
+
+    padding: 0 10px;
+    height: 100%;
+    width: 100%;
+
+    min-height: 100%;
+    background: linear-gradient(0deg, #000000b4, #000000a4), var( --bg-img );
+    background-size: 150%;
+
+    background-position: center;
+    transition: background-size 200ms;
+}
+
+#projects .projects .project .text {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    gap: 5px;
+}
+
+#projects .projects .project .text h2 { 
+    font-weight: 600;
+    font-size: 2rem;
+
+    background: linear-gradient(90deg, var(--color-1), var(--color-2));
+    height: 100%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#projects .projects .project .desc {
+    display: flex;
+    height: 100%;
+}
+
+#projects .projects .project a {
+    color: var( --color-highlight );
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#projects .projects .project:hover {
+    border: #ffffff9f 2px solid;
+    cursor: pointer;
+
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 200ms;
+}
+
+
+
